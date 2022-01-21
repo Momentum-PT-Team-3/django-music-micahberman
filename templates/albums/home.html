@@ -12,7 +12,7 @@
 </header>
 <section>
     {% for album in albums %}
-    <p>{{album}} by {{album.artist}}</p>
+    <p><a href= "{% url 'album_details' pk=album.pk %}"> {{album}} </a> by {{album.artist}}</p>
     {% endfor %}
 </section>
 </body>
