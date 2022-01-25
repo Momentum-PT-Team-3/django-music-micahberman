@@ -20,7 +20,7 @@ from music_lib import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="home"),
-    path('albums/new', views.add_album, name='add-album'),
+    path('albums/new', views.add_album, name='add_album'),
     path('albums/<int:pk>/', views.album_details, name='album_details'), 
     path('albums/<int:pk>/edit', views.album_edit, name='album_edit'),
     path('albums/<int:pk>/delete', views.album_delete, name='album_delete'),

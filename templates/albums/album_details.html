@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
     <section class="album">
         <h2>{{album.title}}</h2>
         <p>Artist:{{album.artist}}</p>
         <p>Track Listing:{{album.album_details}}</p>
+        <a href= "{{album.artist_website}}">Artist Website</a>
         <p>Date added: {{album.creation_time}}</p>
         <br>
         <aside class="actions">
@@ -20,7 +14,9 @@
             <a class="btn btn-secondary" href="{% url 'album_delete' pk=album.pk%}">
                 DELETE
             </a>
+            <a class="btn btn-secondary" href="{% url 'home' %}">
+                HOME
+            </a>
         </aside>
     </section>
-</body>
-</html>
+{% endblock %}
