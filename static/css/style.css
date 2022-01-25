@@ -1,5 +1,21 @@
-header {
-    color: rebeccapurple;
-    font-size: x-large;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+html, body {background-color: coral;
+            margin: 0;
+            padding: 0;
+}
+
+.title {
+    size: 100;
+    text-align: center;
+    
+}
+
+.album {
+    text-align: center;
+
+}
+
+.album_title {
+    color: sienna;
+    font-weight: 600;
+    font-size: 50px;
 }

@@ -1,17 +1,38 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <header>
-        <h1>Music Library</h1>
-    </header>
-        {% for album in albums %}
-        <p><a href="{% url 'album_details' pk=album.pk %}"> {{album}} </a> by <a
-                href="{{album.artist_website}}">{{album.artist}}</a></p>
-        {% endfor %}
-  
-    <a class="btn btn-secondary" href="{% url 'add_album' %}">
-        Add Album
-    </a>
+<header class="container">
+    <h1 class="title">Music Library</h1>
+</header>
+
+<section>
+    <div class="container">
+        <table class="table is-fullwidth is-hoverable">
+            <thead>
+                <tr>
+                    <th>Album Title</th>
+                    <th>Album Artist</th>
+                    
+                </tr>
+            </thead>
+
+            {% for album in albums %}
+            <tr>
+            <td><p><a href="{% url 'album_details' pk=album.pk %}"> {{album}} </a> 
+                
+             <td><p><a href="{{album.artist_website}}">{{album.artist}}</a></p></td>
+            </tr>
+            {% endfor %}
+            
+        </table>
+        <div style="text-align: center;">
+            <a class="button is-outlined" href="{% url 'add_album' %}">
+                Add Album
+            </a>
+        </div>
+        </table>
+    </div>
+</section>
+
 
 {% endblock %}
-

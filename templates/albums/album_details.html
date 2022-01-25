@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
     <section class="album">
-        <h2>{{album.title}}</h2>
+        <h1 class="album_title">{{album.title}}</h1>
         <p>Artist:{{album.artist}}</p>
         <p>Track Listing:{{album.album_details}}</p>
         <a href= "{{album.artist_website}}">Artist Website</a>
         <p>Date added: {{album.creation_time}}</p>
         <br>
         <aside class="actions">
-            <a class="btn btn-secondary" href="{% url 'album_edit' pk=album.pk %}">
+            <a class="button" href="{% url 'album_edit' pk=album.pk %}">
                 EDIT 
             </a>
-            <a class="btn btn-secondary" href="{% url 'album_delete' pk=album.pk%}">
+            <a class="button" href="{% url 'album_delete' pk=album.pk%}">
                 DELETE
             </a>
-            <a class="btn btn-secondary" href="{% url 'home' %}">
+            <a class="button" href="{% url 'home' %}">
                 HOME
             </a>
         </aside>

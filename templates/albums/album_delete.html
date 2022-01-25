@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+<header>Are you sure?</header>
     <form action="" method="post">
         {% csrf_token %}
-        <button type="submit">Confirm Delete</button>
+        <button class ="button" type="submit">Confirm Delete</button>
     </form>
-    <a class="btn btn-secondary" href="{% url 'home'%}">
+    <a class="button" href="{% url 'home' %}">
         Cancel
     </a>
 {% endblock %}
